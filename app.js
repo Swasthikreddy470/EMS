@@ -26,7 +26,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://lla:lla@cluster0.ktxitjz.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://somaswasthik:8374938470@cluster0.oc5gu6o.mongodb.net/");
 const userSchema = new mongoose.Schema({
     firstName: String,
     lastName: String,
@@ -40,7 +40,7 @@ const appSchema = new mongoose.Schema({
     userID: String
 
 });
-
+mongoose.set('strictQuery', true);
 const eventSchema = new mongoose.Schema({
     eventName: String,
     unformatedStartTime: String,
